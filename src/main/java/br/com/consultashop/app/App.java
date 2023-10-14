@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-//z
 public class App extends Application {
 
 	public static void main(String[] args) {
