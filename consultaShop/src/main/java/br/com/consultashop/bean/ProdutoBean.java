@@ -1,6 +1,7 @@
 package br.com.consultashop.bean;
 
 public class ProdutoBean {
+//	ok
 	private String descricaoProduto, codigoBarra, precoUnitario;
 	
 	public void setDescricaoProduto(String descricaoProduto) {
