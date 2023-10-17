@@ -19,6 +19,7 @@ public class App extends Application {
 		 Scene scene = new Scene(load);
 		 primaryStage.setScene(scene);
 		 primaryStage.show();
+//		 ok
 	}
 	
 }
