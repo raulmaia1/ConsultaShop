@@ -19,6 +19,10 @@ public class App extends Application {
 		 Scene scene = new Scene(load);
 		 primaryStage.setScene(scene);
 		 primaryStage.show();
+<<<<<<< HEAD
+=======
+//		 ok
+>>>>>>> branch 'main' of https://github.com/raulmaia1/ConsultaShop.git
 	}
 	
 }
