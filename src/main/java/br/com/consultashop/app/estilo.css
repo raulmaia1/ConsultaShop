@@ -64,8 +64,12 @@
 	-fx-background-image: url('search_FILL0_wght400_GRAD0_opsz24.png');
     -fx-background-size: 30px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: 90%;
-    -fx-background-radius:2;
+    -fx-background-position: center-top;
+    -fx-background-radius:5;
+    
+    -fx-font-size: 14px;
+    -fx-text-fill: #5e5e5e;
+    -fx-font-family: "Roboto";
 }
 
 .material-button-add{
