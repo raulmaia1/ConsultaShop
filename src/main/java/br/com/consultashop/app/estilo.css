@@ -1,151 +1,229 @@
 .root {
-	-fx-background-size: 1200px;
+	-fx-background-size: 1200.0px;
     -fx-background-repeat: repeat;
     -fx-background-position: center;
-    -fx-background-color: linear-gradient(from 0% 50% to 100% 50%, rgba(96, 96, 96,1), rgba(244,244,244,0));
-	-fx-background-image: url(fundo.jpg);
+    -fx-background-color: #5AC4EB, linear-gradient(from 0.0% 100.0% to 50.0% 20.0%, rgba(96.0, 96.0, 96.0,1.0), rgba(244.0,244.0,244.0,0.0));
+	
 }
 
+
 .material-card{
-	-fx-background-color: linear-gradient(#eeeeee 0%,#eeeeee 20%,#eeeeee 100%);
-	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
-	-fx-background-radius: 10;
+	-fx-background-color: linear-gradient(#eeeeee 0.0%,#eeeeee 20.0%,#eeeeee 100.0%);
+	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+	-fx-background-radius: 10.0 0.0 0.0 10.0;
 }
 
 
 .material-card-lateral{	
-	-fx-background-color: linear-gradient(rgb(38, 38, 38, 0.8) 0%,rgb(38, 38, 38, 0.8) 20%,rgb(38, 38, 38, 0.8) 100%);
-	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+	-fx-background-color: linear-gradient(rgb(38.0, 38.0, 38.0, 0.8) 0.0%,rgb(38.0, 38.0, 38.0, 0.8) 20.0%,rgb(38.0, 38.0, 38.0, 0.8) 100.0%);
+	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
 }
 
 .material-card-centro{
-	-fx-background-color: linear-gradient(#252a48 0%,#252a48 20%,#252a48 100%);
-	-fx-background-radius: 10;   
+	-fx-background-color: linear-gradient(#252a48 0.0%,#252a48 20.0%,#252a48 100.0%);
+	-fx-background-radius: 10.0;   
 }
 
 .material-card-image{
-	-fx-background-color: linear-gradient(#656b9e 0%,#656b9e 20%,#656b9e 100%);
+	-fx-background-color: linear-gradient(#656b9e 0.0%,#656b9e 20.0%,#656b9e 100.0%);
 	-fx-background-image: url('baseline_category_white_48dp.png');
-    -fx-background-size: 30px;
+    -fx-background-size: 30.0px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
-    -fx-background-radius:2;
+    -fx-background-radius:2.0;
 }
 
 .material-card-label-principal{
-	-fx-font-size: 15px;
+	-fx-font-size: 15.0px;
     -fx-text-fill: #0d0d0d;
     -fx-font-family: "Roboto";
 }
 
 .material-card-label-secundario{
-	-fx-font-size: 14px;
+	-fx-font-size: 14.0px;
     -fx-text-fill: #5e5e5e;
     -fx-font-family: "Roboto";
-    -fx-border-width: 5 ; 
+    -fx-border-width: 5.0; 
 
 }
 
 .material-textfield{	
-	-fx-background-color: linear-gradient(rgb(38, 38, 38, 0.8) 0%,rgb(38, 38, 38, 0.8) 20%,rgb(38, 38, 38, 0.8) 100%);
+	-fx-background-color: linear-gradient(rgb(38.0, 38.0, 38.0, 0.8) 0.0%,rgb(38.0, 38.0, 38.0, 0.8) 20.0%,rgb(38.0, 38.0, 38.0, 0.8) 100.0%);
 	-fx-text-fill: #eeeeee;
-	-fx-background-radius: 20;
+	-fx-background-radius: 20.0 0.0 0.0 20.0;
 }
 
 .material-textfield-transparent{	
 	-fx-background-color: transparent;
 	-fx-text-fill: #eeeeee;
-    -fx-border-width: 2px;
-    -fx-border-color:  rgba(0, 0, 0, 0.3); 
+    -fx-border-width: 2.0px;
+    -fx-border-color:  rgba(0.0, 0.0, 0.0, 0.3); 
 }
 
-.material-button-search{
-	-fx-background-color: transparent;
+.material-button-search {
+	-fx-background-color: #5e5e5e;
 	-fx-background-image: url('search_FILL0_wght400_GRAD0_opsz24.png');
-    -fx-background-size: 30px;
+    -fx-background-size: 25.0px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center-top;
-    -fx-background-radius:5;
+    -fx-background-position: center;
+    -fx-background-radius: 0.0 20.0 20.0 0.0;
     
-    -fx-font-size: 14px;
-    -fx-text-fill: #5e5e5e;
-    -fx-font-family: "Roboto";
 }
 
+/*Botoes TooGGled*/
+
+.material-button-consulta{
+    -fx-font-size: 14.0px;
+    -fx-text-fill: #eeeeee;
+    -fx-font-family: "Roboto";
+    
+    
+    -fx-background-color: transparent;
+    -fx-padding: 10.0px;
+    -fx-graphic: url('search_FILL0_wght400_GRAD0_opsz24.png');
+    -fx-background-size: 33.0px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+    
+}
+
+.material-button-consulta:selected {
+	-fx-font-size: 14.0px;
+    -fx-text-fill: #eeeeee;
+    -fx-font-family: "Roboto";
+    
+	-fx-background-color: #5AC4EB;
+    -fx-background-size: 33.0px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+	-fx-padding: 10.0px;
+    -fx-graphic: url('search_FILL0_wght400_GRAD0_opsz24.png');   
+}
+
+.material-button-finalizar{
+    -fx-font-size: 14.0px;
+    -fx-text-fill: #eeeeee;
+    -fx-font-family: "Roboto";
+    
+    
+    -fx-background-color: transparent;
+    -fx-padding: 10.0px;
+    -fx-graphic: url('carrinho.png');
+    -fx-background-size: auto;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+    
+}
+
+.material-button-finalizar:selected {
+	-fx-font-size: 14.0px;
+    -fx-text-fill: #eeeeee;
+    -fx-font-family: "Roboto";
+    
+	-fx-background-color: #5AC4EB;
+	-fx-background-size: auto;
+	
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+	-fx-padding: 10.0px;
+    -fx-graphic: url('carrinho.png');   
+}
+
+
+.material-button-configuracao{
+    -fx-font-size: 14.0px;
+    -fx-text-fill: #eeeeee;
+    -fx-font-family: "Roboto";
+    
+    
+    -fx-background-color: transparent;
+    -fx-padding: 10.0px;
+    -fx-graphic: url('configuracao.png');
+    -fx-background-size: auto;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+    
+}
+
+.material-button-configuracao:selected {
+	-fx-font-size: 14.0px;
+    -fx-text-fill: #eeeeee;
+    -fx-font-family: "Roboto";
+    
+	-fx-background-color: #5AC4EB;
+	-fx-background-size: auto;
+	
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top;
+	-fx-padding: 10.0px;
+	-fx-graphic: url('configuracao.png');   
+	
+}
+
+/*Fim */
 .material-button-add{
 	-fx-background-color: transparent;
 	-fx-background-image: url('add.png');
-    -fx-background-size: 30px;
+    -fx-background-size: 30.0px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: 90%;
-    -fx-background-radius:2;
+    -fx-background-position: 90.0%;
+    -fx-background-radius:2.0;
 }
 
 .material-button-eliminar{
 	-fx-background-color: transparent;
-	-fx-border-width: 0,0,1,0;
+	-fx-border-width: 0.0,0.0,1.0,0.0;
 	-fx-text-fill : #9c0808;
 }
 
 .material-card-produtos{
-	-fx-background-insets: 0, 0 0 1 0 ;
-	-fx-background-color: linear-gradient(rgb(101, 107, 158,.4) 0%,rgb(101, 107, 158,.4) 20%,rgb(101, 107, 158,.4) 100%);
-	-fx-background-radius: 1;
-	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0 ;
+	-fx-background-color: linear-gradient(rgb(101.0, 107.0, 158.0,0.4) 0.0%,rgb(101.0, 107.0, 158.0,0.4) 20.0%,rgb(101.0, 107.0, 158.0,0.4) 100.0%);
+	-fx-background-radius: 1.0;
+	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
 }
 
 .material-card-produtos-label{
-	-fx-font-size: 16px;
+	-fx-font-size: 16.0px;
     -fx-text-fill: #0d0d0d;
     -fx-font-family: "Roboto";
 }
 
 
-/*Menu Finalizar*/
-
-.material-button-finalizar{
-	-fx-background-color: transparent;
-	-fx-background-image: url('finalizar.png');
-    -fx-background-size: 30px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: 10%;
-    -fx-background-radius:2;
-}
-
 .material-button-detalhe-venda{
 	-fx-background-color: transparent;
 	-fx-background-image: url('carrinho.png');
-    -fx-background-size: 30px;
+    -fx-background-size: 30.0px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: 10%;
-    -fx-background-radius:2;
+    -fx-background-position: 10.0%;
+    -fx-background-radius:2.0;
 }
 
 .material-button-configuracao{
 	-fx-background-color: transparent;
 	-fx-background-image: url('baseline_build_white_48dp.png');
-    -fx-background-size: 30px;
+    -fx-background-size: 30.0px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: 10%;
-    -fx-background-radius:2;
+    -fx-background-position: 10.0%;
+    -fx-background-radius:2.0;
 }
 
 
 
 .text-material{
-	-fx-background-insets: 0, 0 0 1 0 ;
-    -fx-background-radius: 0; 
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0 ;
+    -fx-background-radius: 0.0; 
 }
 .card-secundario{
-	-fx-background-color: linear-gradient(#bdbdbd 0%,#bdbdbd 20%,#bdbdbd 100%);
+	-fx-background-color: linear-gradient(#bdbdbd 0.0%,#bdbdbd 20.0%,#bdbdbd 100.0%);
 }
 
 .button-ferramentas{
 	-fx-background-color: transparent;
 	-fx-background-image: url('tool.png');
-	 -fx-background-size: 20px;
+	 -fx-background-size: 20.0px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: 90%;
+    -fx-background-position: 90.0%;
 }
 .button-ferramentas:hover{
 	-fx-scale-x: 1.1;
@@ -153,32 +231,32 @@
 }
 
 .lado{
-	-fx-background-color: linear-gradient(#244b6a 0%, #244b6a 20%, #244b6a 100%);
+	-fx-background-color: linear-gradient(#244b6a 0.0%, #244b6a 20.0%, #244b6a 100.0%);
 }
 
 .button:over{
-	-fx-scale:110;
+	-fx-scale:110.0;
 }
 .text-field{
-	-fx-border-width: 0,0,0,0;
+	-fx-border-width: 0.0,0.0,0.0,0.0;
 }
 .label-mensagem{
-	-fx-font-size: 12px;
+	-fx-font-size: 12.0px;
     -fx-text-fill: #F5F5F5;
 }
 .text-configuracao{
-	-fx-background-insets: 0, 0 0 1 0 ;
-    -fx-background-radius: 0; 
+	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0 ;
+    -fx-background-radius: 0.0; 
 }
 
 .button-done{
 	-fx-background-color:
-        linear-gradient(#00253d 0%, #00253d 20%, #00253d 100%);
+        linear-gradient(#00253d 0.0%, #00253d 20.0%, #00253d 100.0%);
 	-fx-background-image: url('done.png');
-    -fx-background-radius: 90; 
-	 -fx-background-size: 30px;
+    -fx-background-radius: 90.0; 
+	 -fx-background-size: 30.0px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: 50%;
+    -fx-background-position: 50.0%;
 }
 
 .button-done:hover{
