@@ -5,18 +5,19 @@ import java.util.List;
 
 import br.com.consultashop.bean.ProdutoBean;
 import br.com.consultashop.listasimulada.ListaSimulada;
-import javafx.stage.Stage;
 
 public class ControllerVendaView {
 
-	private Stage stage;
+	private List<ProdutoBean> carrinho = new ArrayList<>();
 
 	public List<ProdutoBean> pesquisa(String text) {
 		
 		List<ProdutoBean> lista = new ArrayList<>();
 		
 		new ListaSimulada().getListaProdutos().forEach(p ->{
-			if (p.getDescricaoProduto().contains(text) || (p.getCodigoBarra().contains(text))) {
+			if (p.getDescricaoProduto().contains(text) || (p.getCodigoBarra().contains(text))
+					|| (p.getDescricaoProduto().contains(text.toUpperCase()))) {
+				
 				lista.add(p);
 			}
 		});
@@ -25,15 +26,10 @@ public class ControllerVendaView {
 	}
 
 	public void adicionaProdutoCarrinho(ProdutoBean p) {
-		
-	}
-
-	public void setStage(Stage stage) {
-		this.stage = stage;
+		carrinho.add(p);
 	}
 	
-	public Stage getStage() {
-		return stage;
+	public List<ProdutoBean> getCarrinho() {
+		return carrinho;
 	}
-
 }

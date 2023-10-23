@@ -39,7 +39,7 @@ public class ListaSimulada {
 
 		
 		ProdutoBean produtoBean5 = new ProdutoBean();
-		produtoBean5.setDescricaoProduto("ARROZ COMUM");
+		produtoBean5.setDescricaoProduto("FARINHA");
 		produtoBean5.setCodigoBarra("78911111111111");
 		produtoBean5.setPrecoUnitario("4,50");
 		lista.add(produtoBean5);

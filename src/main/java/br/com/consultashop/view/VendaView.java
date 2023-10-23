@@ -9,29 +9,28 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
 public class VendaView implements Initializable {
 	
 	@FXML
 	private BorderPane painelPrincipal;
 	private ControllerVendaView controller = new ControllerVendaView();
-	private Stage stage;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		this.controller.setStage(this.stage);
-		((ConsultaView) abrijanela("consulta.fxml")).setController(controller);		
+		((ConsultaView) abrijanela("consulta.fxml")).setController(this.controller);		
 	}
 	
 	@FXML
 	private void abrirConsulta() {
-		 ((ConsultaView) abrijanela("consulta.fxml")).setController(controller);
+		 ((ConsultaView) abrijanela("consulta.fxml")).setController(this.controller);
 	}
+	
 	@FXML
 	private void abrirFinalizar() {
-		abrijanela("finalizar.fxml");
+		((FinalizaView) abrijanela("finalizar.fxml")).adicionaItensListView(this.controller);
 	}
+	
 	@FXML
 	private void abrirConfiguracao() {
 
@@ -50,8 +49,5 @@ public class VendaView implements Initializable {
 		}
 		throw new RuntimeException("Erro ao carregar FXML");
 	}
-
-	public void setStage(Stage stage) {
-		this.stage = stage;
-	}
+	
 }

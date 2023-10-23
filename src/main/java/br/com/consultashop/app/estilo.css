@@ -2,7 +2,7 @@
 	-fx-background-size: 1200.0px;
     -fx-background-repeat: repeat;
     -fx-background-position: center;
-    -fx-background-color: #5AC4EB, linear-gradient(from 0.0% 100.0% to 50.0% 20.0%, rgb(90, 196, 235,1.0), rgba(244.0,244.0,244.0,0.0));
+    -fx-background-color: #5AC4EB, linear-gradient(from 0.0% 100.0% to 50.0% 20.0%, rgb(90.0, 196.0, 235.0,1.0), rgba(244.0,244.0,244.0,0.0));
 }
 
 .material-card{
@@ -69,7 +69,7 @@
     -fx-background-size: 25.0px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
-    -fx-background-radius: 20;
+    -fx-background-radius: 20.0;
     
 }
 
@@ -267,4 +267,27 @@
 	-fx-scale-x: 1.1;
 	-fx-scale-y: 1.1;
 }
+
+.list-view-transparent{
+	-fx-background-color: transparent;
+}
+/*
+ 
+.list-view .list-cell:even {
+	-fx-background-color: linear-gradient(#eeeeee 0.0%,#eeeeee 20.0%,#eeeeee 100.0%);
+	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+	-fx-font-size: 16.0px;
+    -fx-text-fill: #0d0d0d;
+    -fx-font-family: "Roboto";
+}
+.list-view .list-cell:odd {
+	-fx-background-color: linear-gradient(#eeeeee 0.0%,#eeeeee 20.0%,#eeeeee 100.0%);
+	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+	-fx-font-size: 16.0px;
+    -fx-text-fill: #0d0d0d;
+    -fx-font-family: "Roboto";
+}
+* 
+ */
+ 
 

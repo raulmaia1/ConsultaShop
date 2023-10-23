@@ -1,9 +1,5 @@
 package br.com.consultashop.view;
 
-import com.jfoenix.animation.alert.JFXAlertAnimation;
-import com.jfoenix.controls.JFXAlert;
-import com.jfoenix.controls.JFXDialogLayout;
-
 import br.com.consultashop.controller.ControllerVendaView;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -15,8 +11,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.StageStyle;
 
 public class ConsultaView {
 	@FXML
@@ -25,19 +19,6 @@ public class ConsultaView {
 	private FlowPane flowResultado;
 	
 	private ControllerVendaView controller;
-
-	protected void afterShow() {
-		JFXDialogLayout layout = new JFXDialogLayout();
-		layout.setBody(new Label(
-				"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."));
-		JFXAlert<Void> alert = new JFXAlert<>(controller.getStage());
-		alert.setOverlayClose(false);
-		alert.setAnimation(JFXAlertAnimation.CENTER_ANIMATION);
-		alert.setContent(layout);
-		alert.initStyle(StageStyle.UNDECORATED);
-		alert.initModality(Modality.NONE);
-		alert.show();
-	}
 
 	@FXML
 	private void pesquisarProdutos() {
@@ -80,7 +61,7 @@ public class ConsultaView {
 
 			button.setOnAction(ev -> {
 				controller.adicionaProdutoCarrinho(p);
-				afterShow();
+				MessagemView.notificar("Produto adicionado com sucesso.");
 			});
 
 			hBox.getChildren().add(button);
