@@ -2,17 +2,13 @@
 	-fx-background-size: 1200.0px;
     -fx-background-repeat: repeat;
     -fx-background-position: center;
-    -fx-background-color: #5AC4EB, linear-gradient(from 0.0% 100.0% to 50.0% 20.0%, rgba(96.0, 96.0, 96.0,1.0), rgba(244.0,244.0,244.0,0.0));
-	
+    -fx-background-color: #5AC4EB, linear-gradient(from 0.0% 100.0% to 50.0% 20.0%, rgb(90, 196, 235,1.0), rgba(244.0,244.0,244.0,0.0));
 }
-
 
 .material-card{
 	-fx-background-color: linear-gradient(#eeeeee 0.0%,#eeeeee 20.0%,#eeeeee 100.0%);
 	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
-	-fx-background-radius: 10.0 0.0 0.0 10.0;
 }
-
 
 .material-card-lateral{	
 	-fx-background-color: linear-gradient(rgb(38.0, 38.0, 38.0, 0.8) 0.0%,rgb(38.0, 38.0, 38.0, 0.8) 20.0%,rgb(38.0, 38.0, 38.0, 0.8) 100.0%);
@@ -44,7 +40,6 @@
     -fx-text-fill: #5e5e5e;
     -fx-font-family: "Roboto";
     -fx-border-width: 5.0; 
-
 }
 
 .material-textfield{	
@@ -62,21 +57,32 @@
 
 .material-button-search {
 	-fx-background-color: #5e5e5e;
-	-fx-background-image: url('search_FILL0_wght400_GRAD0_opsz24.png');
+    -fx-background-size: 25.0px;
+    -fx-background-image: url('search_FILL0_wght400_GRAD0_opsz24.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-radius: 0.0 20.0 20.0 0.0;   
+}
+
+.material-button-add-quantidade {
+	-fx-background-color: #5AC4EB;
     -fx-background-size: 25.0px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
-    -fx-background-radius: 0.0 20.0 20.0 0.0;
+    -fx-background-radius: 20;
     
 }
 
+.material-button-add-quantidade:hover {
+	-fx-scale-x: 1.1;
+	-fx-scale-y: 1.1;
+}
 /*Botoes TooGGled*/
 
 .material-button-consulta{
     -fx-font-size: 14.0px;
     -fx-text-fill: #eeeeee;
     -fx-font-family: "Roboto";
-    
     
     -fx-background-color: transparent;
     -fx-padding: 10.0px;
@@ -207,8 +213,6 @@
     -fx-background-position: 10.0%;
     -fx-background-radius:2.0;
 }
-
-
 
 .text-material{
 	-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0 ;

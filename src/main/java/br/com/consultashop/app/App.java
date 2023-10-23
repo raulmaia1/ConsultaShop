@@ -5,7 +5,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class App extends Application {
 
@@ -15,11 +17,19 @@ public class App extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		 BorderPane load = FXMLLoader.load(VendaView.class.getResource("venda.fxml"));
+		
+		FXMLLoader fxmlLoader = new FXMLLoader();
+		fxmlLoader.setLocation(VendaView.class.getResource("venda.fxml"));
+		BorderPane load = fxmlLoader.load();
+		//Teste
+		
 		 Scene scene = new Scene(load);
 		 primaryStage.setScene(scene);
+		 ((VendaView) fxmlLoader.getController()).setStage(primaryStage);
+		 
+		 primaryStage.initStyle(StageStyle.DECORATED);
+		 
 		 primaryStage.show();
-//		 ok
 	}
 	
 }

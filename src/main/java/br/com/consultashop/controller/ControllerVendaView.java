@@ -1,20 +1,39 @@
 package br.com.consultashop.controller;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import br.com.consultashop.bean.ProdutoBean;
+import br.com.consultashop.listasimulada.ListaSimulada;
+import javafx.stage.Stage;
 
 public class ControllerVendaView {
 
-	public Optional<List<ProdutoBean>> pesquisa(String text) {
-		ProdutoBean produtoBean = new ProdutoBean();
-		produtoBean.setDescricaoProduto("ARROZ COMUM");
-		produtoBean.setCodigoBarra("78911111111111");
-		produtoBean.setPrecoUnitario("4,50");
+	private Stage stage;
+
+	public List<ProdutoBean> pesquisa(String text) {
+		
+		List<ProdutoBean> lista = new ArrayList<>();
+		
+		new ListaSimulada().getListaProdutos().forEach(p ->{
+			if (p.getDescricaoProduto().contains(text) || (p.getCodigoBarra().contains(text))) {
+				lista.add(p);
+			}
+		});
 	
-		return Optional.ofNullable(Arrays.asList(produtoBean));
+		return lista;
+	}
+
+	public void adicionaProdutoCarrinho(ProdutoBean p) {
+		
+	}
+
+	public void setStage(Stage stage) {
+		this.stage = stage;
+	}
+	
+	public Stage getStage() {
+		return stage;
 	}
 
 }

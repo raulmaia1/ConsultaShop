@@ -1,122 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="1018.0" stylesheets="@../app/estilo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.consultashop.view.VendaView">
-   <center>
-      <BorderPane prefHeight="567.0" prefWidth="787.0" BorderPane.alignment="CENTER">
-         <center>
-            <BorderPane prefHeight="567.0" prefWidth="519.0" BorderPane.alignment="CENTER">
-               <center>
-                  <FlowPane fx:id="flowResultado" hgap="5.0" prefHeight="416.0" prefWidth="457.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <VBox prefHeight="110.0" prefWidth="237.0" spacing="2.0" styleClass="material-card">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="249.0" styleClass="material-card-produtos-label" text="ARROZ COM FEIJAO" textFill="#0a0a0a">
-                                 <font>
-                                    <Font name="Roboto" size="13.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="15.0" layoutY="15.0" prefHeight="20.0" prefWidth="249.0" styleClass="material-card-produtos-label" text="COD.: 78912345678" textFill="WHITE">
-                                 <font>
-                                    <Font name="Roboto" size="13.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="15.0" layoutY="37.0" prefHeight="20.0" prefWidth="249.0" styleClass="material-card-produtos-label" text="PREÇO.: R$ 4,50" textFill="WHITE">
-                                 <font>
-                                    <Font name="Roboto" size="13.0" />
-                                 </font>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
-                                 <children>
-                                    <TextField alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="63.0" styleClass="text-configuracao" text="1" />
-                                    <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="31.0" styleClass="material-button-add" />
-                                 </children>
-                              </HBox>
-                           </children>
-                           <padding>
-                              <Insets left="5.0" top="5.0" />
-                           </padding>
-                        </VBox>
-                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="110.0" prefWidth="237.0" spacing="2.0" styleClass="material-card">
-                           <children>
-                              <Label prefHeight="20.0" prefWidth="249.0" styleClass="material-card-produtos-label" text="ARROZ COM FEIJAO" textFill="#0a0a0a">
-                                 <font>
-                                    <Font name="Roboto" size="13.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="15.0" layoutY="15.0" prefHeight="20.0" prefWidth="249.0" styleClass="material-card-produtos-label" text="COD.: 78912345678" textFill="WHITE">
-                                 <font>
-                                    <Font name="Roboto" size="13.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="15.0" layoutY="37.0" prefHeight="20.0" prefWidth="249.0" styleClass="material-card-produtos-label" text="PREÇO.: R$ 4,50" textFill="WHITE">
-                                 <font>
-                                    <Font name="Roboto" size="13.0" />
-                                 </font>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
-                                 <children>
-                                    <TextField alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="63.0" styleClass="text-configuracao" text="1" />
-                                    <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="31.0" styleClass="material-button-add" />
-                                 </children>
-                              </HBox>
-                           </children>
-                           <padding>
-                              <Insets left="5.0" top="5.0" />
-                           </padding>
-                        </VBox>
-                     </children>
-                     <BorderPane.margin>
-                        <Insets />
-                     </BorderPane.margin>
-                     <padding>
-                        <Insets left="10.0" top="5.0" />
-                     </padding>
-                  </FlowPane>
-               </center>
-            </BorderPane>
-         </center>
-      </BorderPane>
-   </center>
+<BorderPane fx:id="painelPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="1018.0" stylesheets="@../app/estilo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.consultashop.view.VendaView">
    <bottom>
       <HBox alignment="CENTER" prefHeight="95.0" prefWidth="1018.0" spacing="2.0" styleClass="material-card-lateral" BorderPane.alignment="CENTER">
          <children>
-            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" prefHeight="82.0" prefWidth="98.0" selected="true" styleClass="material-button-consulta" text="Consulta" textAlignment="CENTER">
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#abrirConsulta" prefHeight="82.0" prefWidth="98.0" selected="true" styleClass="material-button-consulta" text="Consulta" textAlignment="CENTER">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
                <toggleGroup>
                   <ToggleGroup fx:id="grupo" />
                </toggleGroup></ToggleButton>
-            <ToggleButton alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="82.0" prefWidth="125.0" styleClass="material-button-finalizar" text="Finalizar Venda" textAlignment="CENTER" toggleGroup="$grupo">
+            <ToggleButton alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#abrirFinalizar" prefHeight="82.0" prefWidth="125.0" styleClass="material-button-finalizar" text="Finalizar Venda" textAlignment="CENTER" toggleGroup="$grupo">
                <padding>
                   <Insets bottom="5.0" />
                </padding></ToggleButton>
-            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" prefHeight="79.0" prefWidth="119.0" styleClass="material-button-configuracao" text="Configurações" textAlignment="CENTER" toggleGroup="$grupo" />
+            <ToggleButton contentDisplay="TOP" mnemonicParsing="false" onAction="#abrirFinalizar" prefHeight="79.0" prefWidth="119.0" styleClass="material-button-configuracao" text="Configurações" textAlignment="CENTER" toggleGroup="$grupo" />
          </children>
       </HBox>
    </bottom>
-   <top>
-      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="1018.0" BorderPane.alignment="CENTER">
-         <children>
-            <TextField fx:id="textPesquisar" onAction="#pesquisarProdutos" onKeyPressed="#pesquisarProdutos" prefHeight="45.0" prefWidth="518.0" promptText="Digite aqui" styleClass="material-textfield">
-               <opaqueInsets>
-                  <Insets bottom="1.0" />
-               </opaqueInsets>
-            </TextField>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="49.0" styleClass="material-button-search" />
-         </children>
-      </HBox>
-   </top>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
 </BorderPane>
