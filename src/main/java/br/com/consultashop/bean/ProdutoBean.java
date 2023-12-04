@@ -1,8 +1,11 @@
 package br.com.consultashop.bean;
 
+import java.math.BigDecimal;
+
 public class ProdutoBean {
 //	ok
-	private String descricaoProduto, codigoBarra, precoUnitario;
+	private String descricaoProduto, codigoBarra;
+	private BigDecimal precoUnitario;
 	
 	public void setDescricaoProduto(String descricaoProduto) {
 		this.descricaoProduto = descricaoProduto;
@@ -20,14 +23,12 @@ public class ProdutoBean {
 		this.codigoBarra = codigoBarra;
 	}
 
-	public String getPrecoUnitario() {
+	public BigDecimal getPrecoUnitario() {
 		return precoUnitario;
 	}
 
 	public void setPrecoUnitario(String precoUnitario) {
-		this.precoUnitario = precoUnitario;
+		this.precoUnitario = new BigDecimal(precoUnitario.replace(",", "."));
 	}
-
-	
 	
 }

@@ -254,8 +254,9 @@
 }
 
 .button-done{
-	-fx-background-color:
-        linear-gradient(#00253d 0.0%, #00253d 20.0%, #00253d 100.0%);
+	
+	-fx-background-color: #5AC4EB, linear-gradient(from 0.0% 100.0% to 50.0% 20.0%, rgb(90.0, 196.0, 235.0,1.0), rgba(244.0,244.0,244.0,0.0));
+	
 	-fx-background-image: url('done.png');
     -fx-background-radius: 90.0; 
 	 -fx-background-size: 30.0px;
@@ -271,6 +272,21 @@
 .list-view-transparent{
 	-fx-background-color: transparent;
 }
+
+.button-concluir{
+	-fx-background-image: url('done.png');
+ 	-fx-background-color: #5AC4EB, linear-gradient(from 0.0% 100.0% to 50.0% 20.0%, rgb(90.0, 196.0, 235.0,1.0), rgba(244.0,244.0,244.0,0.0));
+    -fx-background-size: 30.0px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-radius: 120.0;
+}
+
+.button-concluir:hover{
+	-fx-scale-x: 1.1;
+	-fx-scale-y: 1.1;
+}
+
 /*
  
 .list-view .list-cell:even {

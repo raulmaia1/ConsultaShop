@@ -28,14 +28,13 @@ public class VendaView implements Initializable {
 	
 	@FXML
 	private void abrirFinalizar() {
-		((FinalizaView) abrijanela("finalizar.fxml")).adicionaItensListView(this.controller);
+		((FinalizaView) abrijanela("finalizar.fxml")).setController(this.controller); 
 	}
 	
 	@FXML
 	private void abrirConfiguracao() {
 
 	}
-	
 	
 	private <T> T abrijanela(String janela) {
 		try {	

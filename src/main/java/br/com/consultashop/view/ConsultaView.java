@@ -1,5 +1,6 @@
 package br.com.consultashop.view;
 
+import br.com.consultashop.bean.ProdutoVendaBean;
 import br.com.consultashop.controller.ControllerVendaView;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -46,7 +47,7 @@ public class ConsultaView {
 			label2.getStyleClass().add("material-card-produtos-label");
 			vBox.getChildren().add(label2);
 
-			Label label3 = new Label(p.getPrecoUnitario());
+			Label label3 = new Label(p.getPrecoUnitario().toString());
 			label3.getStyleClass().add("material-card-produtos-label");
 			vBox.getChildren().add(label3);
 
@@ -60,11 +61,12 @@ public class ConsultaView {
 			button.setPrefSize(80, 20);
 
 			button.setOnAction(ev -> {
-				controller.adicionaProdutoCarrinho(p);
+				controller.adicionaProdutoCarrinho(new ProdutoVendaBean(p));
 				MessagemView.notificar("Produto adicionado com sucesso.");
 			});
 
 			hBox.getChildren().add(button);
+			hBox.setPadding(new Insets(5));
 
 			vBox.getChildren().add(hBox);
 			vBoxPrincipal.getChildren().add(vBox);

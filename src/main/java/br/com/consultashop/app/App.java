@@ -24,8 +24,7 @@ public class App extends Application {
 		 Scene scene = new Scene(load);
 		 primaryStage.setScene(scene);
 
-		 primaryStage.initStyle(StageStyle.DECORATED);
-		 primaryStage.setMaximized(true);
+		 primaryStage.initStyle(StageStyle.UTILITY);
 		 primaryStage.show();
 	}
 	

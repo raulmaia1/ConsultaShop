@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.consultashop.bean.ProdutoBean;
+import br.com.consultashop.bean.ProdutoVendaBean;
+import br.com.consultashop.bean.VendaBean;
 import br.com.consultashop.listasimulada.ListaSimulada;
 
 public class ControllerVendaView {
-
-	private List<ProdutoBean> carrinho = new ArrayList<>();
-
+	
+	private VendaBean venda = new VendaBean();
+	
 	public List<ProdutoBean> pesquisa(String text) {
 		
 		List<ProdutoBean> lista = new ArrayList<>();
@@ -25,11 +27,15 @@ public class ControllerVendaView {
 		return lista;
 	}
 
-	public void adicionaProdutoCarrinho(ProdutoBean p) {
-		carrinho.add(p);
+	public void adicionaProdutoCarrinho(ProdutoVendaBean p) {
+		this.venda.adiciona(p);
 	}
 	
-	public List<ProdutoBean> getCarrinho() {
-		return carrinho;
+	public List<ProdutoVendaBean> getCarrinho() {
+		return venda.getCarrinho();
+	}
+	
+	public VendaBean getVenda() {
+		return venda;
 	}
 }
